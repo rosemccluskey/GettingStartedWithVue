@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Growler";
+}
+
+<div id="growler">
+    <h1>{{ appName}}</h1>
+    <form id="form" action="#" method="get">
+        <div>
+            <input type="search" v-model="query" v-on:keydown="clearValidation" placeholder="Search..." />
+            <button v-on:click.prevent="executeSearch">Search</button>
+        </div>
+
+        <div>
+            Searching for: {{ query}}
+            <span class="v-error">{{ validation}}</span>
+        </div>
+    </form>
+</div>
+
+@section Scripts
+{
+}
